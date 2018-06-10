@@ -1,0 +1,49 @@
+{
+    "pycaffe_dir":"/home/ec2-user/src/caffe/python/caffe",
+    "caffe_home":"/home/ec2-user/src/caffe",
+    "face_detector_threshold":"90",
+    "models" : {
+	"Gender" : {
+		"prototxt": "./models/gender/weights/adience_gender_custom_227_withaugmentations_v001.h5",
+		"framework":"keras",
+		"kerasmodel": "./models/gender/gender_custom_model.json",
+		"input_dim" : 227
+        },
+        "Things": {
+                "caffemodel":"./models/things/Inception21k.caffemodel",
+                "framework":"caffe",
+                "prototxt": "./models/things/InceptionBN-21K-for-Caffe-deploy.prototxt",
+                "mean": "./models/things/ilsvrc_2012_mean.npy",
+                "list": "./models/things/synset.txt"
+        },
+        "Places": {
+
+                "caffemodel":"./models/places/vgg16_places365.caffemodel",
+                "framework":"caffe",
+                "prototxt": "./models/places/deploy_vgg16_places365.prototxt",
+                "mean": "./models/places/mean.npy",
+                "list": "./models/places/categories_places365.txt"
+        },
+        "Receipts": {
+                "framework":"keras",
+                "prototxt": "./models/receipts/weights/receipts_512_v001",
+                "kerasmodel": "./models/receipts/alexnet.py",
+                "input_dim":512
+        },
+        "Food": {
+                "framework":"keras",
+                "prototxt": "./models/food/weights/food_or_not_227_finetuned_onlydense.h5",
+                "kerasmodel": "./models/food/alexnet.py",
+                "input_dim":227
+        },
+	"Aesthetics": {
+		"framework":"keras",
+                "prototxt": "./models/aesthetics/weights/sncr_custom_224_2classes_sgd_uniform.h5",
+                "kerasmodel": "./models/aesthetics/aesthetics_custom_model.json",
+                "input_dim":224
+        }
+
+
+    }
+       
+}
